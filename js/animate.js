@@ -125,6 +125,12 @@ let render = function () {
 					
 					player.timeLimit = defaultTimelimit;
 				}
+
+				// check for game success
+				if (checkBlockIds.length === 0) {
+					isRunning = false;
+					showResult(player.customData.totalDistance);
+				}
 			} 
 		}
 	}
@@ -198,6 +204,12 @@ let render = function () {
 
 	// update health bar ====================
 	updateHealthBar(player.health / defualtHealth);
+
+	// check for game end----------------------
+	if (player.health <= 0) {
+		isRunning = false;
+		showResult(player.customData.totalDistance);
+	}
 
 	// update camera ==============
 	if (playerConfig.CameraFollow) {
