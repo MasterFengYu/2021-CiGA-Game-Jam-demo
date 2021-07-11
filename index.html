@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+  <script type="text/javascript" src="./lib/three.js"></script>
+  <script type="text/javascript" src="./lib/OrbitControls.js"></script>
+  <script type="text/javascript" src="./lib/GLTFLoader.js"></script>
+  <script type="text/javascript" src="./lib/dat.gui.min.js"></script>
+  <script type="text/javascript" src="./lib/jquery-3.6.0.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./index.css">
+
+</head>
+<body>
+
+  <div id="game">
+    <div id="three"></div>
+
+  </div>
+
+  <div id="health-bar-container">
+    <div id="health-bar"></div>
+  </div>
+
+  <div id="ui-frame"></div>
+
+  <div id="dashboard">
+    <div id="pointer"></div>
+  </div>
+
+  <div id="timer"></div>
+
+<!--   <div id="health"></div> -->
+
+  <div id="manual">
+    <div id="manual-content">
+      <div id="manual-start-button" onclick="startClicked()"></div>
+    </div>
+  </div>
+
+
+  <div id="intro-cover" onclick='introClicked()'>
+    <!-- <div id="start-button" onclick='introClicked()'></div> -->
+  </div>
+
+
+  <script type="text/javascript" src="./js/AssetConfig.js"></script>
+  <script type="text/javascript" src="./js/MapConfig.js"></script>
+
+  <script type="text/javascript" src="./js/Smoke.js"></script>
+  <script type="text/javascript" src="./js/Dust.js"></script>
+  <script type="text/javascript" src="./js/initUI.js"></script>
+  <script type="text/javascript" src="./js/initScene.js"></script>
+  <script type="text/javascript" src="./js/loadMap.js"></script>
+  <script type="text/javascript" src="./js/loadBlocks.js"></script>
+  <script type="text/javascript" src="./js/prepareLevel.js"></script>
+  <script type="text/javascript" src="./js/animate.js"></script>
+
+  <script type="text/javascript" src="./js/loadAsset.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+
+  <!-- <script type="text/javascript" src="./js/MapConfig.js"></script> -->
+
+
+
+<!--   <script type="text/javascript" src="./js/render.js"></script>
+  <script type="text/javascript" src="./js/render.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script> -->
+
+</body>
+</html>

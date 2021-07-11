@@ -1,0 +1,190 @@
+
+body {
+  overflow-y: hidden;
+  padding: 0px;
+  margin: 0px;
+}
+
+#game {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+
+#three {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+
+#dashboard {
+  position: absolute;
+  right: 10px;
+  /*bottom: 0px;*/
+  bottom: -55px;
+  width: 300px;
+  height: 300px;
+  background-image: url('./image/dashboard.png');
+  background-size: contain;
+}
+
+#pointer {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  width: 20px;
+  height: 114px;
+  background-image: url('./image/pointer.png');
+  background-size: contain;
+
+    transform: translateY(30px) rotate(-120deg);
+    -ms-transform: translateY(30px) rotate(-120deg);     /* IE 9 */
+    -moz-transform: translateY(30px) rotate(-120deg);    /* Firefox */
+    -webkit-transform: translateY(30px) rotate(-120deg); /* Safari 和 Chrome */
+    -o-transform: translateY(30px) rotate(-120deg);  /* Opera */
+
+
+transform-origin:50% 80%;
+-ms-transform-origin:50% 80%;     /* IE 9 */
+-webkit-transform-origin:50% 80%; /* Safari 和 Chrome */
+-moz-transform-origin:50% 80%;    /* Firefox */
+-o-transform-origin:50% 80%;
+
+
+
+}
+
+/*#timer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 120px;
+  height: 40px;
+  color: white;
+  font-size: 36px;
+}*/
+
+#timer {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  width: 120px;
+  height: 40px;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 48px;
+}
+
+#health {
+  position: absolute;
+  left: 0px;
+  top: 60px;
+  width: 120px;
+  height: 40px;
+  color: white;
+  font-size: 36px;
+}
+
+
+
+
+#ui-frame {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100vw;
+  height: 33.33vw;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  background-image: url('./image/ui_frame.png');
+  background-size: contain;
+  pointer-events: none;
+}
+
+
+#health-bar-container {
+  position: absolute;
+  left: 4vw;
+  bottom: 1.2vw;
+  width: 3vw;
+  height: 22.5vw;
+  border-radius: 5px;
+  /*background-color: rgb(150, 200, 254);*/
+
+}
+
+#health-bar {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  /*background-color: rgb(150, 200, 254);*/
+  background-color: #eb4122;
+}
+
+
+
+#intro-cover {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url('./image/intro_bg.jpg');
+  background-size: cover;
+}
+
+/*  <div id="intro-cover">
+    <div id="start-button"></div>*/
+
+
+#start-button {
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+  width: 300px;
+  height: 84px;
+  background-image: url('./image/button_start.jpg');
+  background-size: contain;
+}
+
+
+#manual {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(110, 110, 110, 0.7);
+}
+
+#manual-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  height: 500px;
+  transform: translateX(-50%) translateY(-50%);
+  background-image: url('./image/manual.jpg');
+  background-size: contain;
+}
+
+#manual-start-button {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  width: 300px;
+  height: 84px;
+  transform: translateX(-50%);
+  background-image: url('./image/button_start.jpg');
+  background-size: contain;
+}
+
