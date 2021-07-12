@@ -256,7 +256,8 @@ let AssetConfig = [
 	{
 		name: 'intro_bgm',
 		type: 'audio',
-		url: './audio/intro_bgm.mp3'
+		// url: './audio/intro_bgm.mp3'
+		url: './audio/intro_bgm.ogg'
 	},
 
 ];

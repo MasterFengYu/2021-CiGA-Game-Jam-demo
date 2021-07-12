@@ -15,15 +15,17 @@ let cameraOffset = {
 	z: -60
 };
 
-// let gui = new dat.GUI();
 
 let playerConfig = {
   MaxSpeed: 20, 
   AccelSpeed: 5, 
   turnSpeed: 45,
   DampingSpeed: 3,
+  // CameraFollow: false,
   CameraFollow: true,
 };
+
+// let gui = new dat.GUI();
 // gui.add(playerConfig, 'MaxSpeed', 0, 60, 0.5);
 // gui.add(playerConfig, 'AccelSpeed', 2, 40, 0.1);
 // gui.add(playerConfig, 'turnSpeed', 1, 90, 0.5);
@@ -47,10 +49,11 @@ loadAssets(AssetConfig, () => {
 
 	prepareLevel();
 
+	$('#loading-cover').fadeOut(300);
+
 	animate();
 
 // *****************************************************
-// !!!!!!!!!!!!!!!!!!!!!!!!
 	introBgmSound = new THREE.Audio( listener );
 	introBgmSound.setBuffer( assets['intro_bgm'] );
 	introBgmSound.setLoop( true );

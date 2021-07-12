@@ -23,7 +23,6 @@ let initPlayer = function () {
 	player.position.set(railBlocks[3].position.x, 1.0, railBlocks[3].position.z);
 	player.rotateY(-Math.PI / 2);
 	//================================
-  // player.material.emissiveIntensity = 1;
     scene.add(player);
     initPlayerControl();
 

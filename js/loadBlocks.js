@@ -1467,114 +1467,119 @@ let otherBlocks = [
 
 	{
 		gridX: -4,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 	{
 		gridX: -3,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 	{
 		gridX: -2,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
+	{
+		gridX: -1,
+		gridY: 0,		
+		type: 'invisible_blocking'
+	},
 
 	{
-		gridX: -0,
-		gridY: 53,		
+		gridX: 0,
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 	{
 		gridX: 1,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 	{
 		gridX: 2,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 
 	{
 		gridX: 3,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 	{
 		gridX: 4,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 	{
 		gridX: 5,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 
 	{
 		gridX: 6,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 	{
 		gridX: 7,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 	{
 		gridX: 8,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 
 	{
 		gridX: 9,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 	{
 		gridX: 10,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 	{
 		gridX: 11,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 
 	{
 		gridX: 12,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 	{
 		gridX: 13,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 
 	{
 		gridX: 14,
-		gridY: 53,		
+		gridY: 0,		
 		type: 'invisible_blocking'
 	},
 

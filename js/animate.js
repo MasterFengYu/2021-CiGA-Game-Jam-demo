@@ -129,8 +129,16 @@ let render = function () {
 				// check for game success
 				if (checkBlockIds.length === 0) {
 					isRunning = false;
-					showResult(player.customData.totalDistance);
+					showResultSuccess(player.customData.totalDistance);
+					successSound.play();
 				}
+
+				// debug ==================
+					// isRunning = false;
+					// showResultSuccess(player.customData.totalDistance);
+					// successSound.play();
+				// -===============
+
 			} 
 		}
 	}
@@ -153,13 +161,14 @@ let render = function () {
 				player.health -= collideDamage;
 				speed *= (-1 * 0.5);
 				player.translateZ(speed / 60);
-
+				damageHint();
 			} else if (b.blockType === "invisible_blocking") {
 				player.health -= collideDamage;
 				// console.log(speed);
 				speed *= (-1 * 0.5);
 				player.translateZ(speed / 60);
 				crashSound.play();
+				damageHint();
 			} else if (b.blockType === 'water_blocking') {
 				speed *= (-1 * 0.5);
 				player.translateZ(speed / 60);
@@ -191,6 +200,7 @@ let render = function () {
 	// time limit reached, take damage
 	if (player.timeLimit <= 0) {
 		player.health -= (timeLimitDamage / 60);
+		damageHint();
 	}
 
 	// check for speeding ====================
@@ -208,7 +218,8 @@ let render = function () {
 	// check for game end----------------------
 	if (player.health <= 0) {
 		isRunning = false;
-		showResult(player.customData.totalDistance);
+		showResultFail(player.customData.totalDistance);
+		failSound.play();
 	}
 
 	// update camera ==============
@@ -240,9 +251,9 @@ let render = function () {
 		smokeTimer = 0;
 		for (let i = 0; i < 3; i++) {
 			new Smoke(
-				player.position.x + Math.random() * 2, 
-				player.position.y + 5 + Math.random() * 2, 
-				player.position.z + Math.random() * 2
+				player.position.x + Math.random() * 2 - 2, 
+				player.position.y + 4 + Math.random() * 2, 
+				player.position.z + Math.random() * 2 - 1
 			);
 		}
 
@@ -291,6 +302,7 @@ let animate = function () {
 let introClicked = function () {
 
 	document.getElementById('intro-cover').style.display = 'none';
+	clickSound.play();
 
 	// bgmSound.play();
 
@@ -300,6 +312,7 @@ let introClicked = function () {
 let startClicked = function () {
 
 	introBgmSound.pause();
+	clickSound.play();
 	bgmSound.play();
 
 	document.getElementById('manual').style.display = 'none';

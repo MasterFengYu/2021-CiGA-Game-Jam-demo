@@ -52,18 +52,83 @@ let updateHealthBar = function (per) {
 		$("#health-bar").css('height', h);
 	}
 
-
-
 }
 
 
-let showResult = function (result) {
-	document.getElementById('result-number').innerHTML = result.toFixed(0);
-	document.getElementById('result-container').style.top = '0px';
 
+
+
+let showResultSuccess = function (result) {
+	document.getElementById('result-number-success').innerHTML = result.toFixed(0);
+	document.getElementById('result-container-success').style.top = '0px';
+
+	$('#result-poster-success').animateRotate(380, {
+	  duration: 800,
+	  easing: 'easeOutQuint',
+	  complete: function () {
+
+	  	setTimeout(function () { $('#bullet-hole-1').show(0, 'linear'); }, 80);
+	  	setTimeout(function () { $('#bullet-hole-2').show(0, 'linear'); }, 160);
+	  	setTimeout(function () { $('#bullet-hole-3').show(0, 'linear'); }, 240);
+	  	setTimeout(function () { $('#bullet-hole-4').show(0, 'linear'); }, 360);
+	  	setTimeout(function () { $('#bullet-hole-5').show(0, 'linear'); }, 420);
+	  	setTimeout(function () { $('#bullet-hole-6').show(0, 'linear'); }, 700);
+	  },
+	  step: function () {}
+	});
 
 	// crashSound.stop();
 	runningSound.stop();
 
 }
+
+
+
+
+let showResultFail = function (result) {
+	document.getElementById('result-number-fail').innerHTML = result.toFixed(0);
+	document.getElementById('result-container-fail').style.top = '0px';
+
+	$('#result-poster-fail').animateRotate(380, {
+	  duration: 800,
+	  easing: 'easeOutQuint',
+	  complete: function () {
+	  	setTimeout(function () { $('#bullet-hole-1').show(0, 'linear'); }, 80);
+	  	setTimeout(function () { $('#bullet-hole-2').show(0, 'linear'); }, 160);
+	  	setTimeout(function () { $('#bullet-hole-3').show(0, 'linear'); }, 240);
+	  	setTimeout(function () { $('#bullet-hole-4').show(0, 'linear'); }, 360);
+	  	setTimeout(function () { $('#bullet-hole-5').show(0, 'linear'); }, 420);
+	  	setTimeout(function () { $('#bullet-hole-6').show(0, 'linear'); }, 700);
+	  },
+	  step: function () {}
+	});
+
+	// crashSound.stop();
+	runningSound.stop();
+
+}
+
+
+
+let damageHint = function () {
+	$('#take-damage').show().fadeOut(1000);
+	// $('#take-damage').hide(1000);
+}
+
+
+
+$.fn.animateRotate = function(angle, duration, easing, complete) {
+  var args = $.speed(duration, easing, complete);
+  var step = args.step;
+  return this.each(function(i, e) {
+    args.complete = $.proxy(args.complete, e);
+    args.step = function(now) {
+      $.style(e, 'transform', 'rotate(' + now + 'deg)');
+      if (step) return step.apply(e, arguments);
+    };
+
+    $({deg: 0}).animate({deg: angle}, args);
+  });
+};
+
 

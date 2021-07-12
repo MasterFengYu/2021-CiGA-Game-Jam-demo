@@ -4,6 +4,9 @@ let buttonSound;
 let crashSound;
 let runningSound;
 let introBgmSound;
+let successSound;
+let failSound;
+let clickSound;
 
 let initScene = function () {
 	
@@ -36,6 +39,7 @@ let initScene = function () {
 
     // aditional default ----------
     let control = new THREE.OrbitControls(camera, renderer.domElement); 
+    control.enabled = false;
 
     const directionalLight = new THREE.DirectionalLight( 0xffffff, 1.5 );
     directionalLight.castShadow = true;
@@ -107,6 +111,24 @@ let initScene = function () {
 	// introBgmSound.setLoop( true );
 	// introBgmSound.setVolume(1);
 	// // introBgmSound.play();
+
+	successSound = new THREE.Audio( listener );
+	successSound.setBuffer( assets['success'] );
+	successSound.setLoop( false );
+	successSound.setVolume(1);
+
+	
+	failSound = new THREE.Audio( listener );
+	failSound.setBuffer( assets['fail'] );
+	failSound.setLoop( false );
+	failSound.setVolume(1);
+
+
+	clickSound = new THREE.Audio( listener );
+	clickSound.setBuffer( assets['button_click'] );
+	clickSound.setLoop( false );
+	clickSound.setVolume(1);
+
 
 	isRunning = false;
 

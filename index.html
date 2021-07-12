@@ -8,6 +8,7 @@
   <script type="text/javascript" src="./lib/GLTFLoader.js"></script>
   <script type="text/javascript" src="./lib/dat.gui.min.js"></script>
   <script type="text/javascript" src="./lib/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./lib/jquery.easing.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="./index.css">
 
@@ -40,8 +41,43 @@
   </div>
 
 
-  <div id="intro-cover" onclick='introClicked()'>
-    <!-- <div id="start-button" onclick='introClicked()'></div> -->
+  <div id="intro-cover">
+    <div id="start-button" onclick='introClicked()'></div>
+  </div>
+
+
+  <div id="result-container-success" onclick="location.reload()">
+    <div id="result-poster-success">
+      <div id="result-number-success">0</div>
+    </div>
+  </div>
+
+
+  <div id="result-container-fail" onclick="location.reload()">
+    <div id="result-poster-fail">
+      <div id="result-number-fail">0</div>
+    </div>
+  </div>
+
+  <div id="take-damage"></div>
+
+  <div class="bullet-hole" id="bullet-hole-1"></div>
+  <div class="bullet-hole" id="bullet-hole-2"></div>
+  <div class="bullet-hole" id="bullet-hole-3"></div>
+  <div class="bullet-hole" id="bullet-hole-4"></div>
+  <div class="bullet-hole" id="bullet-hole-5"></div>
+  <div class="bullet-hole" id="bullet-hole-6"></div>
+
+  <div id="loading-cover">
+    <div id="loading-animation-wrapper">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+    </div>
+    Loading
   </div>
 
 
